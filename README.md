@@ -14,7 +14,7 @@ The project will be built in React, with a dynamic svg for the map.
     - [ ] Colours
     - [ ] Ports
 - [ ] Dynamic map (3-4p)
-    - [ ] Hex grid data structure
+    - [x] Hex grid data structure
     - [ ] Random map generation (model)
     - [ ] Components
         - [ ] Hexes w/ terrain
