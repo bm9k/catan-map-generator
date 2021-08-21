@@ -11,7 +11,7 @@ The project will be built in React, with a dynamic svg for the map.
 - [ ] Data
     - [x] Terrain counts
     - [x] Number counts
-    - [ ] Colours
+    - [x] Colours
     - [ ] Ports
 - [ ] Dynamic map (3-4p)
     - [x] Hex grid data structure
