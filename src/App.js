@@ -2,22 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const generateMap = () => {
+    console.log('generating map');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Catan Map Generator</h1>
       </header>
+      
+      <section id="controls">
+        <button onClick={generateMap}>Generate</button>
+      </section>
+      <section id="map">
+        Map goes here
+      </section>
+
     </div>
   );
 }

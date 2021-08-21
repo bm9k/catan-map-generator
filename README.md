@@ -7,7 +7,7 @@ The project will be built in React, with a dynamic svg for the map.
 
 ## Tasks
 - [x] Initialise CRA project
-- [ ] Basic UI (generate button & static map)
+- [x] Basic UI (generate button & static map)
 - [ ] Data
     - [ ] Terrain counts
     - [ ] Number counts
