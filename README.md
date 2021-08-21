@@ -9,8 +9,8 @@ The project will be built in React, with a dynamic svg for the map.
 - [x] Initialise CRA project
 - [x] Basic UI (generate button & static map)
 - [ ] Data
-    - [ ] Terrain counts
-    - [ ] Number counts
+    - [x] Terrain counts
+    - [x] Number counts
     - [ ] Colours
     - [ ] Ports
 - [ ] Dynamic map (3-4p)
