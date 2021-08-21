@@ -11,7 +11,7 @@
  * Represented by projecting three primary axes (q, r, s)
  * onto a 2d plane such that q + r + s = 0 (i.e. q, r, s are 120deg apart)
  */
- export class HexVector {
+export class HexVector {
     constructor(q, r) {
         this.q = q;
         this.r = r;
@@ -48,16 +48,16 @@
     }
 
     rotateRight(steps) {
-        const {q, r, s} = this;
-        
+        const { q, r, s } = this;
+
         const components = [q, r, s];
-        
+
         const sign = steps % 2 === 1 ? -1 : 1;
         // components -> rotate -> update sign
         // only need first two components
-        const [q2, r2] = [0,1].map((index) => components[(index + steps) % 3])
-                              .map(e => e * sign + 0);
-    
+        const [q2, r2] = [0, 1].map((index) => components[(index + steps) % 3])
+            .map(e => e * sign + 0);
+
         return new HexVector(q2, r2);
     }
 }
@@ -151,7 +151,7 @@ export class HexMap {
     }
 
     *ringKeys(radius) {
-        if (radius === 0) {    
+        if (radius === 0) {
             yield CENTRE;
             return;
         }
@@ -161,7 +161,7 @@ export class HexMap {
         for (let i = 0; i < 6; i++) {
             for (let j = 0; j < radius; j++) {
                 yield key;
-                
+
                 key = key.add(NEIGHBOURS[i]);
             }
         }

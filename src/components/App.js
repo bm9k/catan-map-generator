@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import MapGenerator from './util/map-generator';
-import { tileCounts, numberCounts } from './data/map';
+import MapGenerator from '../util/map-generator';
+import { tileCounts, numberCounts } from '../data/map';
 import { useState } from 'react';
 
 
