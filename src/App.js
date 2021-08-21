@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import MapGenerator from './util/map-generator';
+import { tileCounts, numberCounts } from './data/map';
+import { useState } from 'react';
+
 
 function App() {
+  const mapGenerator = new MapGenerator(tileCounts, numberCounts);
+  const [map, setMap] = useState(mapGenerator.generate());
 
   const generateMap = () => {
-    console.log('generating map');
+    const newMap = mapGenerator.generate();
+    setMap(newMap);
   }
 
   return (
@@ -17,7 +24,7 @@ function App() {
         <button onClick={generateMap}>Generate</button>
       </section>
       <section id="map">
-        Map goes here
+        <pre><code>{[...map.entries()].map((entry) => JSON.stringify(entry) + "\n")}</code></pre>
       </section>
 
     </div>
