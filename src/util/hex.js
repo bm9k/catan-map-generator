@@ -91,7 +91,7 @@
 export class HexMap {
     /**
      * Create a hexagonal map
-     * @param {int} radius - The number of hexagonal rings in the map, radiating out from the centre (which has radius 0)
+     * @param {int} radius - The number of hexagonal rings in the map, radiating out from the centre (which itself in on radius 0)
      * 
      */
     constructor(radius) {
