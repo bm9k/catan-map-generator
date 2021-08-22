@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import MapGenerator from '../util/map-generator';
 import { tileCounts, numberCounts, portCounts, portGeometries } from '../data/map';
 import { useState } from 'react';
