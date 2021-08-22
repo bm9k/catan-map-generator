@@ -13,13 +13,13 @@ The project will be built in React, with a dynamic svg for the map.
     - [x] Number counts
     - [x] Colours
     - [x] Ports
-- [ ] Dynamic map (3-4p)
+- [x] Dynamic map (3-4p)
     - [x] Hex grid data structure
     - [x] Random map generation (model)
-    - [ ] Components
+    - [x] Components
         - [x] Hexes w/ terrain
         - [x] Number discs
-        - [ ] Ports
+        - [x] Ports
 - [ ] Responsiveness
 - [ ] Presentation
     - [ ] Readme

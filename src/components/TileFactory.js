@@ -25,7 +25,6 @@ export function PortTile({ position, tile, size }) {
         position={position}
         size={size}
         fill={tileColours.sea}
-        stroke="#000"
     >
         <Port size={size} position={position} tile={tile} />
     </Tile>
