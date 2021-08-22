@@ -1,4 +1,4 @@
-export const colours = {
+export const tileColours = {
     'desert': '#d2ca8d',
     'forest': '#179738',
     'hills': '#e16529',
@@ -8,3 +8,8 @@ export const colours = {
     'sea': '#0966a5',
     'land': '#deb467',
 };
+
+export const numberColours = {
+    'major': '#ca0000',
+    'minor': '#001429'
+}

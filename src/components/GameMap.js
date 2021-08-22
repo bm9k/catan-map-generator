@@ -1,6 +1,7 @@
 import Tile from './Tile';
+import NumberToken from './NumberToken';
 
-import { colours } from '../data/colours';
+import { tileColours } from '../data/colours';
 
 export default function GameMap({map, size}) {
     return <g id="tiles">
@@ -8,14 +9,14 @@ export default function GameMap({map, size}) {
             return <Tile
                 key={`${position.q},${position.r}`}
                 position={position}
-                fill={colours[tile.terrain]}
+                fill={tileColours[tile.terrain]}
                 stroke="#000"
                 size={size}
             >
-                <text
-                    textAnchor="middle"
-                    dominantBaseline="central"
-                >{tile.terrain}</text>
+                {tile.number && <NumberToken
+                  number={tile.number}
+                  size={size*.4}
+                />}
             </Tile>
         })}
     </g>

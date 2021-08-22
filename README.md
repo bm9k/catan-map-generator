@@ -18,7 +18,7 @@ The project will be built in React, with a dynamic svg for the map.
     - [x] Random map generation (model)
     - [ ] Components
         - [x] Hexes w/ terrain
-        - [ ] Number discs
+        - [x] Number discs
         - [ ] Ports
 - [ ] Responsiveness
 - [ ] Presentation
