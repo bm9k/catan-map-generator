@@ -199,3 +199,29 @@ export const NEIGHBOURS = [
     new HexVector(0, -1),
     new HexVector(1, -1),
 ]
+
+export const DIAGONALS = [
+    // DIAGONALS[i] = NEIGHBOURS[i] + NEIGHBOURS[i-1]
+    new HexVector(2, -1),
+    new HexVector(1, 1),
+    new HexVector(-1, 2),
+    new HexVector(-2, 1),
+    new HexVector(-1, -1),
+    new HexVector(1, -2),
+]
+
+// vertices of the (0, 0) hex
+export const VERTICES = DIAGONALS.map(({ q, r }) => new HexVector(q / 3, r / 3));
+
+// TODO: calculate this based upon axis definition?
+// e.g., in this case: q => x,-y; r => +y
+// Should it be in a layout/coordinate translator class?
+const Q_BASIS = [Math.sqrt(3), 0];
+const R_BASIS = [Math.sqrt(3) / 2, 3 / 2];
+
+export function hexToPixel(hex, radius) {
+    const x = radius * (Q_BASIS[0] * hex.q + R_BASIS[0] * hex.r);
+    const y = radius * (Q_BASIS[1] * hex.r + R_BASIS[1] * hex.r);
+
+    return { x, y };
+}

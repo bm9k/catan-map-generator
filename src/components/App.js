@@ -2,6 +2,7 @@ import './App.css';
 import MapGenerator from '../util/map-generator';
 import { tileCounts, numberCounts } from '../data/map';
 import { useState } from 'react';
+import GameMap from './GameMap';
 
 
 function App() {
@@ -13,17 +14,22 @@ function App() {
     setMap(newMap);
   }
 
+  const [width, height] = [800, 480];
+  const size = 50;
+
   return (
     <div className="App">
       <header>
         <h1>Catan Map Generator</h1>
       </header>
-      
+
       <section id="controls">
         <button onClick={generateMap}>Generate</button>
       </section>
       <section id="map">
-        <pre><code>{[...map.entries()].map((entry) => JSON.stringify(entry) + "\n")}</code></pre>
+        <svg viewBox={`${-width / 2} ${-height / 2} ${width} ${height}`}>
+          <GameMap map={map} size={size}/>
+        </svg>
       </section>
 
     </div>
