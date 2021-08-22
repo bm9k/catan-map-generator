@@ -1,12 +1,12 @@
 import './App.css';
 import MapGenerator from '../util/map-generator';
-import { tileCounts, numberCounts } from '../data/map';
+import { tileCounts, numberCounts, portCounts, portGeometries } from '../data/map';
 import { useState } from 'react';
 import GameMap from './GameMap';
 
 
 function App() {
-  const mapGenerator = new MapGenerator(tileCounts, numberCounts);
+  const mapGenerator = new MapGenerator(tileCounts, numberCounts, portCounts, portGeometries);
   const [map, setMap] = useState(mapGenerator.generate());
 
   const generateMap = () => {
@@ -14,7 +14,7 @@ function App() {
     setMap(newMap);
   }
 
-  const [width, height] = [800, 480];
+  const [width, height] = [640, 560];
   const size = 50;
 
   return (

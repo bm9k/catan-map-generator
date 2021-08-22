@@ -60,6 +60,10 @@ export class HexVector {
 
         return new HexVector(q2, r2);
     }
+    
+    toString() {
+        return `(${this.q},${this.r})`;
+    }
 }
 
 /**
