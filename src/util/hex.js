@@ -213,6 +213,9 @@ export const DIAGONALS = [
 // vertices of the (0, 0) hex
 export const VERTICES = DIAGONALS.map(({ q, r }) => new HexVector(q / 3, r / 3));
 
+// centre point of edges of the (0, 0) hex
+export const EDGES = NEIGHBOURS.map(({ q, r }) => new HexVector(q / 2, r / 2));
+
 // TODO: calculate this based upon axis definition?
 // e.g., in this case: q => x,-y; r => +y
 // Should it be in a layout/coordinate translator class?
