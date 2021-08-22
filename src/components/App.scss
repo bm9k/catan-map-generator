@@ -1,7 +1,178 @@
-body {
-  background-color: #0966a5;
-}
-
 .App {
   text-align: center;
+}
+
+body {
+  background-color: #0966a5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  font-size: 14px;
+}
+
+header h1 {
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+// Github button vars
+:root {
+  --webkit-text-size-adjust: 100%;
+  --border-width: 1px;
+  --border-style: solid;
+  --font-size-small: 12px;
+  --font-weight-semibold: 500;
+  --size-2: 20px;
+  --color-btn-text: #24292f;
+  --color-btn-bg: #f6f8fa;
+  --color-btn-border: rgba(27, 31, 36, 0.15);
+  --color-btn-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --color-btn-hover-bg: hsla(220, 14%, 93%, 1);
+  --color-btn-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-active-bg: hsla(220, 14%, 86%, 1);
+  --color-btn-active-border: rgba(27, 31, 36, 0.15);
+  --color-btn-selected-bg: hsla(220, 14%, 94%, 1);
+  --color-btn-focus-bg: #f6f8fa;
+  --color-btn-focus-border: rgba(27, 31, 36, 0.15);
+  --color-btn-focus-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+  --color-btn-shadow-active: inset 0 0.15em 0.3em rgba(27, 31, 36, 0.15);
+  --color-btn-shadow-input-focus: 0 0 0 0.2em rgba(9, 105, 218, 0.3);
+  --color-btn-counter-bg: rgba(27, 31, 36, 0.08);
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: #2da44e;
+  --color-btn-primary-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --color-btn-primary-hover-bg: #2c974b;
+  --color-btn-primary-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-selected-bg: hsla(137, 55%, 36%, 1);
+  --color-btn-primary-selected-shadow: inset 0 1px 0 rgba(0, 45, 17, 0.2);
+  --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.8);
+  --color-btn-primary-disabled-bg: #94d3a2;
+  --color-btn-primary-disabled-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-focus-bg: #2da44e;
+  --color-btn-primary-focus-border: rgba(27, 31, 36, 0.15);
+  --color-btn-primary-focus-shadow: 0 0 0 3px rgba(45, 164, 78, 0.4);
+  --color-btn-primary-icon: rgba(255, 255, 255, 0.8);
+  --color-btn-primary-counter-bg: rgba(255, 255, 255, 0.2);
+  --color-btn-outline-text: #0969da;
+  --color-btn-outline-hover-text: #ffffff;
+  --color-btn-outline-hover-bg: #0969da;
+  --color-btn-outline-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-outline-hover-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
+  --color-btn-outline-hover-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --color-btn-outline-hover-counter-bg: rgba(255, 255, 255, 0.2);
+  --color-btn-outline-selected-text: #ffffff;
+  --color-btn-outline-selected-bg: hsla(212, 92%, 42%, 1);
+  --color-btn-outline-selected-border: rgba(27, 31, 36, 0.15);
+  --color-btn-outline-selected-shadow: inset 0 1px 0 rgba(0, 33, 85, 0.2);
+  --color-btn-outline-disabled-text: rgba(9, 105, 218, 0.5);
+  --color-btn-outline-disabled-bg: #f6f8fa;
+  --color-btn-outline-disabled-counter-bg: rgba(9, 105, 218, 0.05);
+  --color-btn-outline-focus-border: rgba(27, 31, 36, 0.15);
+  --color-btn-outline-focus-shadow: 0 0 0 3px rgba(5, 80, 174, 0.4);
+  --color-btn-outline-counter-bg: rgba(9, 105, 218, 0.1);
+  --color-btn-danger-text: #cf222e;
+  --color-btn-danger-hover-text: #ffffff;
+  --color-btn-danger-hover-bg: #a40e26;
+  --color-btn-danger-hover-border: rgba(27, 31, 36, 0.15);
+  --color-btn-danger-hover-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
+  --color-btn-danger-hover-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --color-btn-danger-hover-counter-bg: rgba(255, 255, 255, 0.2);
+  --color-btn-danger-selected-text: #ffffff;
+  --color-btn-danger-selected-bg: hsla(356, 72%, 44%, 1);
+  --color-btn-danger-selected-border: rgba(27, 31, 36, 0.15);
+  --color-btn-danger-selected-shadow: inset 0 1px 0 rgba(76, 0, 20, 0.2);
+  --color-btn-danger-disabled-text: rgba(207, 34, 46, 0.5);
+  --color-btn-danger-disabled-bg: #f6f8fa;
+  --color-btn-danger-disabled-counter-bg: rgba(207, 34, 46, 0.05);
+  --color-btn-danger-focus-border: rgba(27, 31, 36, 0.15);
+  --color-btn-danger-focus-shadow: 0 0 0 3px rgba(164, 14, 38, 0.4);
+  --color-btn-danger-counter-bg: rgba(207, 34, 46, 0.1);
+  --color-btn-danger-icon: #cf222e;
+  --color-btn-danger-hover-icon: #ffffff;
+}
+
+button {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  color: var(--color-btn-text);
+  background-color: var(--color-btn-bg);
+  border-color: var(--color-btn-border);
+  box-shadow: var(--color-btn-shadow), var(--color-btn-inset-shadow);
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+
+  &:hover {
+    background-color: #f3f4f6;
+    text-decoration: none;
+    background-color: var(--color-btn-hover-bg);
+    border-color: var(--color-btn-hover-border);
+    transition-duration: 0.1s;
+  }
+
+  &:disabled {
+    background-color: #fafbfc;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959da5;
+    cursor: default;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: #edeff2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+    background-color: var(--color-btn-active-bg);
+    border-color: var(--color-btn-active-border);
+    transition: none;
+    outline-width: 0;
+  }
+
+  &:focus {
+    outline: 1px transparent;
+  }
+
+  &:before {
+    display: none;
+  }
+
+  &:-webkit-details-marker {
+    display: none;
+  }
 }
