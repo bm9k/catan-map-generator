@@ -16,7 +16,7 @@ export default function NumberToken(props) {
     const colour = numberColours[dots === 5 ? "major" : "minor"];
 
     return <g>
-        <circle cx={0} cy={0} r={size} fill="#eee" />
+        <circle cx={0} cy={0} r={size} fill="#eee" stroke="#888" strokeWidth={0.5} />
         <text
             x={0}
             y={numberOffsetY}
