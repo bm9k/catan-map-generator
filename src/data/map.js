@@ -22,10 +22,34 @@ export const numberCounts = [
 
 export const portCounts = [
     ['random', 4],
-    ['forest', 1],
-    ['hills', 1],
-    ['pasture', 1],
-    ['fields', 1],
-    ['mountains', 1],
+    ['wood', 1],
+    ['brick', 1],
+    ['sheep', 1],
+    ['wheat', 1],
+    ['ore', 1],
 ];
 
+export const portGeometries = [
+    // q, r, edge direction
+    // Represents a port with given geometry:
+    //     position ({q, r}): the position of the tile which the port occupies
+    //     orientation (edge direction): the direction of the land edge;
+    //                                   corresponds to NEIGHBOURS[orientation]
+    [3, 0, 3],
+    [1, 2, 4],
+    [-1, 3, 4],
+    [-3, 3, 5],
+    [-3, 1, 0],
+    [-2, -1, 0],
+    [0, -3, 1],
+    [2, -3, 2],
+    [3, -2, 2],
+];
+
+export const resourcesByTerrain = {
+    'wood': 'forest',
+    'brick': 'hills',
+    'sheep': 'pasture',
+    'wheat': 'fields',
+    'ore': 'mountains',
+};
