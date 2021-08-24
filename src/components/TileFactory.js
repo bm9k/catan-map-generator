@@ -2,7 +2,7 @@ import Tile from "./Tile";
 import NumberToken from "./NumberToken";
 import Port from "./Port";
 
-import { tileColours } from "../data/colours";
+import { edgeColour, tileColours } from "../data/colours";
 
 export function ResourceTile({ position, tile, size }) {
     return <Tile
@@ -10,7 +10,7 @@ export function ResourceTile({ position, tile, size }) {
         position={position}
         size={size}
         fill={tileColours[tile.terrain]}
-        stroke="#000"
+        stroke={edgeColour}
         strokeWidth={size*0.02}
     >
         {tile.number && <NumberToken
@@ -24,7 +24,7 @@ export function PortTile({ position, tile, size }) {
     return <Tile
         position={position}
         size={size}
-        fill={tileColours.sea}
+        fill="none"
     >
         <Port size={size} position={position} tile={tile} />
     </Tile>

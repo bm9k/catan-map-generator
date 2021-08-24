@@ -1,4 +1,4 @@
-import { tileColours } from "../data/colours";
+import { edgeColour, tileColours } from "../data/colours";
 import { resourcesByTerrain } from "../data/map";
 import { EDGES, hexToPixel, VERTICES } from "../util/hex";
 
@@ -74,7 +74,7 @@ export default function Port(props) {
         {/* smooth land */}
         <HexLine
             from={vertexA} to={vertexB} size={size}
-            stroke="#000"
+            stroke={edgeColour}
         />
         <g transform={`translate(${shipCentre.x} ${shipCentre.y})`}>
             <PortShip trade={trade} size={size * shipRadius} />

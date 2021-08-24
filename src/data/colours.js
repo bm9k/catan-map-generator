@@ -9,6 +9,8 @@ export const tileColours = {
     'land': '#deb467',
 };
 
+export const edgeColour = "#222";
+
 export const numberColours = {
     'major': '#ca0000',
     'minor': '#001429'
