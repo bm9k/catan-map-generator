@@ -19,18 +19,26 @@ function App() {
 
   return (
     <div className="App">
+
       <header>
         <h1>Catan Map Generator</h1>
       </header>
 
-      <section id="controls">
-        <button onClick={generateMap}>Generate</button>
+      <section className="controls">
+        <button className="generate" onClick={generateMap}>Generate</button>
       </section>
-      <section id="map">
-        <svg viewBox={`${-width / 2} ${-height / 2} ${width} ${height}`}>
-          <GameMap map={map} size={size}/>
-        </svg>
-      </section>
+
+      <div className="map-container">
+        <section className="map">
+          <svg viewBox={`${-width / 2} ${-height / 2} ${width} ${height}`}>
+            <GameMap map={map} size={size} />
+          </svg>
+        </section>
+      </div>
+
+      <footer>
+        <p>By Benjamin Martin</p>
+      </footer>
 
     </div>
   );

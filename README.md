@@ -20,7 +20,7 @@ The project will be built in React, with a dynamic svg for the map.
         - [x] Hexes w/ terrain
         - [x] Number discs
         - [x] Ports
-- [ ] Responsiveness
+- [x] Responsiveness
 - [ ] Presentation
     - [ ] Readme
     - [ ] Github pages

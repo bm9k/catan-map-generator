@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 body {
   background-color: #0966a5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
@@ -9,9 +5,130 @@ body {
   font-size: 14px;
 }
 
-header h1 {
-  color: #fff;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  display: grid;
+  text-align: center;
+  // touch-action: none;
+
+  header {
+    touch-action: none;
+    user-select: none;
+
+    h1 {
+      color: #fff;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+  }
+
+  .controls button {
+    padding: 12px 20px;
+  }
+
+  .map-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    overflow: auto;
+    touch-action: auto;
+
+    .map {
+      min-width: 100%;
+      min-height: 100%;
+      position: relative;
+      // background: #bbb;
+      overflow: hidden;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  .controls {
+    grid-area: controls;
+  }
+
+  .map-container {
+    grid-area: map;
+  }
+
+  footer {
+    grid-area: footer;
+    font-style: italic;
+  }
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+  .App {
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas:
+      "header"
+      "controls"
+      "map"
+      "footer";
+
+    .controls {
+      padding-top: 1em;
+    }
+
+    footer {
+      justify-self: right;
+      padding-right: 1em;
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+  .App {
+    grid-template-columns: 1.25fr 3fr;
+    grid-template-rows: 1fr auto auto 1fr auto;
+
+    grid-template-areas:
+      ". map"
+      "header map"
+      "controls map"
+      ". map"
+      "footer map";
+
+    header {
+      padding: 0 1em;
+    }
+
+    .controls {
+      overflow: auto;
+      align-self: start;
+    }
+
+    footer {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-aspect-ratio: 5/3) {
+  .App {
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 // Github button vars
