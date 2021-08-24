@@ -3,6 +3,7 @@ import MapGenerator from '../util/map-generator';
 import { tileCounts, numberCounts, portCounts, portGeometries } from '../data/map';
 import { useState } from 'react';
 import GameMap from './GameMap';
+import Footer from './Footer';
 
 
 function App() {
@@ -36,9 +37,7 @@ function App() {
         </section>
       </div>
 
-      <footer>
-        <p>By Benjamin Martin</p>
-      </footer>
+      <Footer/>
 
     </div>
   );

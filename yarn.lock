@@ -1976,6 +1976,11 @@
     "@typescript-eslint/types" "4.15.2"
     eslint-visitor-keys "^2.0.0"
 
+"@uiw/react-github-corners@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@uiw/react-github-corners/-/react-github-corners-1.4.0.tgz#65ff7a09caeedfd8120a8494acf659010b60d3b3"
+  integrity sha512-hXPPJq0JgMNbkqJBdqCX2fXxsUjNm/vdNi9ogQLAZao+hYkim4+9MwS6GNEIljUpdYgsBqjlQ1fxeXVsStMfMg==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
