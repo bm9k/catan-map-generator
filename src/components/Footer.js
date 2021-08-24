@@ -2,7 +2,7 @@ import GithubCorners from "@uiw/react-github-corners";
 
 export default function Footer(props) {
     return <footer>
-      <p>By Benjamin Martin</p>
+      <p>By Benjamin Martin 🦅</p>
 
       <GithubCorners
         href={"https://github.com/bm9k/catan-map-generator"}
