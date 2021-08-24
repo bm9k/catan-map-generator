@@ -15,8 +15,8 @@ function App() {
     setMap(newMap);
   }
 
-  const [width, height] = [640, 560];
   const size = 50;
+  const viewBox = "-285 -250 570 500";
 
   return (
     <div className="App">
@@ -31,7 +31,7 @@ function App() {
 
       <div className="map-container">
         <section className="map">
-          <svg viewBox={`${-width / 2} ${-height / 2} ${width} ${height}`}>
+          <svg viewBox={viewBox}>
             <GameMap map={map} size={size} />
           </svg>
         </section>
