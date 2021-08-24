@@ -1,13 +1,16 @@
-import './App.scss';
-import MapGenerator from '../util/map-generator';
-import { tileCounts, numberCounts, portCounts, portGeometries } from '../data/map';
 import { useState } from 'react';
+
+import MapGenerator from '../util/map-generator';
+import { tileCounts, numberTokens, portCounts, portGeometries } from '../data/map';
+
 import GameMap from './GameMap';
 import Footer from './Footer';
 
+import './App.scss';
+
 
 function App() {
-  const mapGenerator = new MapGenerator(tileCounts, numberCounts, portCounts, portGeometries);
+  const mapGenerator = new MapGenerator(tileCounts, numberTokens, portCounts, portGeometries);
   const [map, setMap] = useState(mapGenerator.generate());
 
   const generateMap = () => {

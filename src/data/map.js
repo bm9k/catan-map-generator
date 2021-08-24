@@ -7,18 +7,8 @@ export const tileCounts = [
     ['mountains', 3],
 ];
 
-export const numberCounts = [
-    [2, 1],
-    [3, 2],
-    [4, 2],
-    [5, 2],
-    [6, 2],
-    [8, 2],
-    [9, 2],
-    [10, 2],
-    [11, 2],
-    [12, 1],
-];
+// ordered according to letter on physical tile (A:5, B:2, etc.)
+export const numberTokens = [5,2,6,3,8,10,9,12,11,4,8,10,9,4,5,6,3,11];
 
 export const portCounts = [
     ['random', 4],

@@ -60,7 +60,7 @@ export class HexVector {
 
         return new HexVector(q2, r2);
     }
-    
+
     toString() {
         return `(${this.q},${this.r})`;
     }
@@ -154,19 +154,23 @@ export class HexMap {
         return this.isHexValid(key);
     }
 
-    *ringKeys(radius) {
+    *ringKeys(radius, firstNeighbour = 4, positiveDirection = true) {
         if (radius === 0) {
             yield CENTRE;
             return;
         }
 
-        let key = CENTRE.add(NEIGHBOURS[4].multiply(radius));
+        let key = CENTRE.add(NEIGHBOURS[firstNeighbour].multiply(radius));
+        const firstDirectionOffset = positiveDirection ? 2 : 4;
+        const firstDirection = (firstNeighbour + firstDirectionOffset) % 6;
+        const directionScale = positiveDirection ? 1 : -1;
 
         for (let i = 0; i < 6; i++) {
+            const i2 = (firstDirection + directionScale * i + 6) % 6;
             for (let j = 0; j < radius; j++) {
                 yield key;
 
-                key = key.add(NEIGHBOURS[i]);
+                key = key.add(NEIGHBOURS[i2]);
             }
         }
     }
