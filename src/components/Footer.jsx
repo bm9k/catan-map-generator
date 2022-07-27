@@ -1,4 +1,4 @@
-import GithubCorners from "@uiw/react-github-corners";
+import GithubCorners from "@uiw/react-github-corners/src/index.tsx";
 
 export default function Footer(props) {
     return <footer>
